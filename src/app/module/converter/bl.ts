@@ -14,11 +14,7 @@ class bl {
                 'X-CMC_PRO_API_KEY': process.env.SECRET_KEY,
                 },
                 url: "https://pro-api.coinmarketcap.com/v2/tools/price-conversion",
-            params: {
-                amount: 1,
-                symbol: "BTC",
-                convert: "INR"
-            }
+            params: request.query
         }))
 
         AxiosForked.on( "message", (message) => {
